@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+  html {
+    scroll-behavior: smooth;
+  }
+//* index.css */
+
+/* Base styles */
+html, body {
+  background-color: black; /* Ensure black background */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#root {
+  height: 100%;
+}
+
+body::before {
+  content: "";
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure it's behind all content */
+}
+
+/* Navbar styles */
+nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: purple;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Glass effect when not on the home section */
+/* Glass effect when not on the home section */
+nav.glass-effect {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker glass effect */
+  backdrop-filter: blur(20px);
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.md\\:hidden {
+  display: none; /* Ensure it's hidden on medium and larger screens */
+}
+
+@media (min-width: 768px) {
+  .md\\:hidden {
+    display: flex; /* Show on medium screens */
+  }
+}
+
+.bg-black {
+  background-color: black;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a202c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .mobile-menu li {
+    padding: 10px 0;
+  }
+}
+
+/* Section styles */
+section {
+  padding: 100px 20px;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Blur effect when menu is open */
+/* body.menu-open .main-content {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+} */
+
+/*Ensure the menu contents are not blurred */
+/*body.menu-open .mobile-menu {
+  filter: none;
+} */
+:root {
+  --navbar-height: 4rem; /* Adjust this value as needed */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: purple;
+  z-index: 50;
+}
+
+.hero {
+  padding-top: calc(var(--navbar-height) + 1rem); /* Add extra space to avoid overlap */
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.lg\\:flex-row {
+  flex-direction: row;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.lg\\:w-1\\/2 {
+  width: 50%;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.lg\\:mb-35 {
+  margin-bottom: 8.75rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-neutral-900 {
+  border-color: #1a1a1a;
+}
+
+.text-6xl {
+  font-size: 4rem;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.tracking-tight {
+  letter-spacing: -0.05em;
+}
+
+.lg\\:mt-16 {
+  margin-top: 4rem;
+}
+
+.lg\\:text-8xl {
+  font-size: 6rem;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-pink-300 {
+  --tw-gradient-from: #fbcfe8;
+}
+
+.via-slate-500 {
+  --tw-gradient-stops: var(--tw-gradient-from), #64748b, var(--tw-gradient-to, rgba(100, 116, 139, 0));
+}
+
+.to-purple-500 {
+  --tw-gradient-to: #a78bfa;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.footer {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+
+nav a {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+}
+
+nav a:hover {
+  color: #6b46c1; /* Color on hover */
+}
+
+/* Adjust the transition for the underline */
+nav span {
+  transition: transform 0.3s ease;
+}
+
+/* styles.css */
+.custom-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Adjust the values for more or less shadow */
+}
+
+/* Add this to your CSS file */
+.close-button {
+  transition: transform 0.3s ease; /* Smooth transition for the transformation */
+}
+
+.close-button:hover {
+  transform: rotate(90deg); /* Rotate 90 degrees on hover */
+}
+
+
+.inputStyle::placeholder {
+  color: #9418c5; /* Purple placeholder */
+}
+
+.inputStyle:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+  transition: box-shadow 0.3s ease-in-out;
+} /* Add this closing bracket */
+
+/* In your CSS file */
+.typing-text {
+  min-height: 40px; /* Adjust this value as needed */
+  display: inline-block; /* Ensures it takes space in the layout */
+}
+
+.cursor {
+  background: white; /* Temporary background color for visibility */
+  width: 10px; /* Width for visibility */
+  height: 20px; /* Height for visibility */
+}
