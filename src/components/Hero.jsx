@@ -17,7 +17,7 @@ const container = (delay) => ({
 const Hero = () => {
   const heroRef = useRef(null);
   const [displayText, setDisplayText] = useState(""); // State to hold the displayed text
-  const phrases = ["Associate Cloud Devops Engineer @ SoftwareOne", "AI/ML Enthusiast"]; // Phrases to cycle through
+  const phrases = ["Cloud Devops Engineer @ SoftwareOne", "AI/ML Enthusiast"]; // Phrases to cycle through
   const typingSpeed = 80; // Speed of typing
   const deletingSpeed = 40; // Speed of deleting
   const pauseDuration = 300; // Pause duration before deleting
